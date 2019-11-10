@@ -2,39 +2,25 @@ import os
 import sys
 
 sys.path.append(os.getcwd())
-import torch
 import torch.nn.functional as F
-import torch.optim as optim
 import torchvision.transforms as transforms
-import torchvision
-import numpy as np
-import pandas as pd
-import cv2
 import pickle
-import lmdb
 import torch.nn as nn
-import time
 
-from torch.autograd import Variable
-from torch.optim.lr_scheduler import StepLR
 from torch.utils.data import DataLoader
-from glob import glob
 from tqdm import tqdm
 from sklearn.model_selection import train_test_split
 from tensorboardX import SummaryWriter
 from collections import OrderedDict
 
 from net.config import *
-from net.network import SiameseAlexNet
 from net.dataset import ImagnetVIDDataset
-from lib.custom_transforms import Normalize, ToTensor, RandomStretch, \
-    RandomCrop, CenterCrop, RandomBlur, ColorAug
+from lib.custom_transforms import ToTensor
 from lib.loss import rpn_smoothL1, rpn_cross_entropy_balance
 from lib.visual import visual
 from lib.utils import get_topk_box, add_box_img, compute_iou, box_transform_inv, adjust_learning_rate
 
-from IPython import embed
-from net.fpn import SiamFPN50, SiamFPN101, SiamFPN152
+from net.fpn import SiamFPN50
 
 torch.manual_seed(config.seed)
 os.environ['CUDA_VISIBLE_DEVICES'] = "1,2,3"  # 赋值需要时字符串

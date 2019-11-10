@@ -7,7 +7,6 @@ import torch.nn.functional as F
 import numpy as np
 from torch.autograd import Variable
 import math
-# from .run_SiamFPN import generate_anchors4fpn, TrackerConfig4FPN
 import gc
 from net.config import config
 

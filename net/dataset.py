@@ -1,23 +1,17 @@
-import torch
 import cv2
-import os
 import sys
+import cv2
 sys.path.append(os.getcwd())
 import numpy as np
 import pickle
 import lmdb
 import hashlib
 import glob
-import xml.etree.ElementTree as ET
-import matplotlib.pyplot as plt
 
 from torch.utils.data.dataset import Dataset
-from lib.generate_anchors import generate_pyramid_anchors,generate_anchors_rpn,generate_anchors_fpn
+from lib.generate_anchors import generate_anchors_fpn
 from net.config import config
-from lib.utils import box_transform, compute_iou, add_box_img, crop_and_pad
-
-from IPython import embed
-
+from lib.utils import box_transform, compute_iou, crop_and_pad
 
 class ImagnetVIDDataset(Dataset):
     def __init__(self, db_path, video_names, data_dir, z_transforms, x_transforms, training=True):

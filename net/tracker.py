@@ -1,15 +1,14 @@
-import torchvision.transforms as transforms
-import time
-import torch.nn.functional as F
-import torch
-import cv2
-import numpy as np
 import os
 import sys
+
+import numpy as np
+import torch
+import torch.nn.functional as F
+import torchvision.transforms as transforms
+
 sys.path.append(os.getcwd())
 from lib.generate_anchors import generate_anchors_fpn, generate_track_windows
-from net.fpn import SiamFPN50, SiamFPN101, SiamFPN152
-from IPython import embed
+from net.fpn import SiamFPN50
 from lib.utils import get_exemplar_image, get_instance_image, box_transform_inv
 from lib.custom_transforms import ToTensor
 from net.config import config

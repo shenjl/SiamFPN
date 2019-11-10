@@ -1,16 +1,9 @@
-import torch, pdb
-import torch.nn
-from IPython import embed
-import torch.nn.functional as F
-import pdb
 import random
 import numpy as np
-import time
-import functools
-
-from .utils import nms, add_box_img, nms_worker
-from torch.multiprocessing import Pool, Manager
-
+import torch
+import torch.nn
+import torch.nn.functional as F
+from .utils import nms
 
 def rpn_cross_entropy(input, target):
     r"""

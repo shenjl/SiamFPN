@@ -1,15 +1,13 @@
-import numpy as np
-import time
-import cv2
-import glob
 import os
 import sys
+import time
+
+import cv2
 
 sys.path.append(os.getcwd())
 from net.tracker import SiamFPNTracker
 from net.config import *
 from tqdm import tqdm
-from IPython import embed
 from lib.utils import track_visualization
 
 def run_SiamFPN(seq_path, model_path, boxes):

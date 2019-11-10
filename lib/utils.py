@@ -1,10 +1,6 @@
-import os
-import torch
-import numpy as np
 import cv2
-import time
-from glob import glob
-from IPython import embed
+import numpy as np
+import torch
 
 
 def get_center(x):

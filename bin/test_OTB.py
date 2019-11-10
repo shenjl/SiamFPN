@@ -1,23 +1,11 @@
 import argparse
-import functools
-import glob
 import json
-import multiprocessing as mp
 import os
 import re
-import sys
-from multiprocessing import Pool
-
-import matplotlib
-import matplotlib.pyplot as plt
-import numpy as np
-from IPython import embed
-from tqdm import tqdm
-
 import setproctitle
-
+import sys
+from tqdm import tqdm
 sys.path.append(os.getcwd())
-
 from net.config import *
 from net.run_SiamFPN import run_SiamFPN
 

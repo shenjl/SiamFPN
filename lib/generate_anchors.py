@@ -3,9 +3,9 @@ import sys
 sys.path.append(os.getcwd())
 import numpy as np
 from net.config import config
-from lib.utils import show_anchors
 import math
-from IPython import embed
+
+
 ############################################################
 #  generate_anchors
 ############################################################

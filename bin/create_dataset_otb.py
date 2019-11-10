@@ -3,17 +3,13 @@ import multiprocessing as mp
 import os
 import pickle
 import sys
-import xml.etree.ElementTree as ET
 from glob import glob
 from multiprocessing import Pool
 sys.path.append(os.getcwd())
 import cv2
-import numpy as np
-from fire import Fire
-from IPython import embed
 from tqdm import tqdm
 
-from lib.utils import add_box_img, get_instance_image
+from lib.utils import get_instance_image
 from net.config import *
 
 

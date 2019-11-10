@@ -1,16 +1,13 @@
-import lmdb
-import cv2
-import numpy as np
+import functools
+import hashlib
 import os
 import sys
-import hashlib
-import functools
+import cv2
+import lmdb
 sys.path.append(os.getcwd())
 from glob import glob
-from fire import Fire
 from tqdm import tqdm
 from multiprocessing import Pool
-from IPython import embed
 import multiprocessing as mp
 from net.config import *
 
